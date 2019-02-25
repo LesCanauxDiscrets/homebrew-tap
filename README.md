@@ -14,13 +14,15 @@ Then look at the formula source and choose which options you want — the option
 
     brew tap LesCanauxDiscrets/tap
     brew tap-pin LesCanauxDiscrets/tap
-    brew install ffmpeg --with-aom --with-chromaprint --with-fdk-aac --with-libass --with-librsvg \
-    --with-libsoxr --with-tesseract --with-libvidstab --with-libvmaf --with-rtmpdump --with-srt --with-webp --with-zvbi
+    brew install ffmpeg --with-aom --with-chromaprint --with-fdk-aac --with-libass --with-librsvg\
+    --with-libsoxr --with-tesseract --with-libvidstab --with-libvmaf --with-rtmpdump\
+    --with-srt --with-webp --with-zvbi
 
 Alternatively, you can install the formula by naming it explicitly:
 
     brew install lescanauxdiscrets/tap/ffmpeg --with-aom --with-chromaprint --with-fdk-aac --with-libass\
-    --with-librsvg --with-libsoxr --with-tesseract --with-libvidstab --with-libvmaf --with-rtmpdump --with-srt --with-webp --with-zvbi
+    --with-librsvg --with-libsoxr --with-tesseract --with-libvidstab --with-libvmaf --with-rtmpdump --with-srt\
+    --with-webp --with-zvbi
 
 
 [removed]: https://github.com/Homebrew/homebrew-core/issues/31510
