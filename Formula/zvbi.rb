@@ -9,7 +9,7 @@ class Zvbi < Formula
   # http://sourceforge.net/p/zapping/bugs/197/ - so remove them until
   # fixed so that we can run the rest of the tests
   def patches
-    Data
+    DATA
   end
 
   def install
