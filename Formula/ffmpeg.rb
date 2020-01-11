@@ -16,6 +16,7 @@ class Ffmpeg < Formula
   depends_on "texi2html" => :build
 
   depends_on "aom"
+  depends_on "fdk-aac"
   depends_on "fontconfig"
   depends_on "freetype"
   depends_on "frei0r"
@@ -27,6 +28,7 @@ class Ffmpeg < Formula
   depends_on "libvidstab"
   depends_on "libvorbis"
   depends_on "libvpx"
+  depends_on "libvmaf"
   depends_on "opencore-amr"
   depends_on "openjpeg"
   depends_on "opus"
@@ -61,7 +63,9 @@ class Ffmpeg < Formula
       --enable-gnutls
       --enable-gpl
       --enable-libaom
+      --enable-libass
       --enable-libbluray
+      --enable-libfdk-aac
       --enable-libmp3lame
       --enable-libopus
       --enable-librubberband
@@ -78,13 +82,13 @@ class Ffmpeg < Formula
       --enable-libfontconfig
       --enable-libfreetype
       --enable-frei0r
-      --enable-libass
       --enable-libopencore-amrnb
       --enable-libopencore-amrwb
       --enable-libopenjpeg
       --enable-librtmp
       --enable-libspeex
       --enable-libsoxr
+      --enable-libvmaf
       --enable-libzvbi
       --enable-videotoolbox
       --disable-libjack
