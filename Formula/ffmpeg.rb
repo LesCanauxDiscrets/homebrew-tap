@@ -55,6 +55,7 @@ class Ffmpeg < Formula
       --enable-shared
       --enable-pthreads
       --enable-version3
+      --enable-hardcoded-tables
       --enable-avresample
       --enable-nonfree
       --cc=#{ENV.cc}
