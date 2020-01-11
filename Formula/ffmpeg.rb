@@ -56,6 +56,7 @@ class Ffmpeg < Formula
       --enable-pthreads
       --enable-version3
       --enable-avresample
+      --enable-nonfree
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
