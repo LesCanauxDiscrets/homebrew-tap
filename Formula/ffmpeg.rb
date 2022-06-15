@@ -101,6 +101,7 @@ class Ffmpeg < Formula
       --prefix=#{prefix}
       --enable-shared
       --cc=#{ENV.cc}
+      --pkg-config=PKGCONFIG
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
       --enable-gpl
