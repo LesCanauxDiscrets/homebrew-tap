@@ -40,6 +40,7 @@ class Ffmpeg < Formula
   depends_on "pkg-config" => :build
   depends_on "texinfo" => :build
 
+  depends_on "aom"
   depends_on "dav1d"
   depends_on "fontconfig"
   depends_on "freetype"
@@ -99,11 +100,16 @@ class Ffmpeg < Formula
     args = %W[
       --prefix=#{prefix}
       --enable-shared
+      --enable-pthreads
+      --enable-version3
       --cc=#{ENV.cc}
-      --pkg-config=PKGCONFIG
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
+      --enable-avresample
+      --enable-ffplay
+      --enable-gnutls
       --enable-gpl
+      --enable-libaom
       --enable-libdav1d
       --enable-libmp3lame
       --enable-libopus
@@ -118,7 +124,6 @@ class Ffmpeg < Formula
       --enable-frei0r
       --enable-libass
       --enable-demuxer=dash
-    ]
 
     if OS.mac?
       args << "--enable-opencl"
