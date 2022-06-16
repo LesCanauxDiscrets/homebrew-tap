@@ -100,14 +100,9 @@ class Ffmpeg < Formula
     args = %W[
       --prefix=#{prefix}
       --enable-shared
-      --enable-pthreads
-      --enable-version3
       --cc=#{ENV.cc}
       --host-cflags=#{ENV.cflags}
       --host-ldflags=#{ENV.ldflags}
-      --enable-avresample
-      --enable-ffplay
-      --enable-gnutls
       --enable-gpl
       --enable-libaom
       --enable-libdav1d
@@ -124,6 +119,7 @@ class Ffmpeg < Formula
       --enable-frei0r
       --enable-libass
       --enable-demuxer=dash
+    ]
 
     if OS.mac?
       args << "--enable-opencl"
@@ -180,6 +176,11 @@ class Ffmpeg < Formula
       ENV.prepend_path "PKG_CONFIG_PATH", Formula["jack"].opt_lib/"pkgconfig"
       args << "--enable-libjack"
       args << "--enable-indev=jack"
+    end
+
+    if build.with? "zvbi"
+      ENV.prepend_path "PKG_CONFIG_PATH", Formula["zvbi"].opt_lib/"pkgconfig"
+      args << "--enable-libzvbi"
     end
 
     args << "--enable-version3" if build.with?("opencore-amr") || build.with?("libvmaf")
